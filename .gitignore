@@ -1,0 +1,9 @@
+# pour python 
+__pycache__
+
+# pour jupyter
+.ipynb_checkpoints
+
+# autres 
+automobile-price-prediction-xgboost.ipynb
+eda-for-automobile-dataset.ipynb
