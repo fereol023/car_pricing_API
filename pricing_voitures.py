@@ -18,7 +18,7 @@ def inference(symboling, normalized_losses, wheel_base, length, width, height, c
     ])
 
     # chargement du modèle
-    model = joblib.load("final_model.pkl")
+    model = joblib.load("./models_backup/final_model.joblib")
 
     # prediction
     return model.predict(new_data.reshape(1, -1))
