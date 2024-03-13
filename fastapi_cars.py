@@ -1,19 +1,19 @@
 import joblib
 import numpy as np
-import uvicorn  
-from fastapi import FastAPI   # requiert internet : add /docs to localhost url the swaggerUI
-                              # add /redoc to see the automatic documentation
+import uvicorn
+from fastapi import FastAPI
 
 app = FastAPI(debug=True) # initialize
 
 @app.get('/')
 def home():
-    return {'text': 'Car Pricing Prediction Solution'}
+    return {'Msg': 'Car Pricing Prediction Solution'}
 
 @app.get('/predict')
 def predict(symboling: float, normalized_losses: float, make: float, fuel_type: float, aspiration: float, num_of_doors: float, body_style: float, drive_wheels: float, engine_location: float, wheel_base: float, 
         length: float, width: float, height: float, curb_weight: float, engine_type: float, num_of_cylinders: float, engine_size: float, fuel_system: float, bore: float, stroke: float, compression_ratio: float, 
         horsepower: float, peak_rpm: float, city_mpg: float, highway_mpg: float):
+    """TO DO : mettre un schema pydantic ou une dataclass pour les données + methode post au lieu de get."""
 
 
     new_data = np.reshape([

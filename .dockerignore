@@ -1,0 +1,10 @@
+.ipynb_checkpoints
+datasets/
+images/
+venv/
+env/
+.gitignore
+*.ipynb
+*.md
+*.yml
+utils.py

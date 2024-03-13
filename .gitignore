@@ -1,9 +1,13 @@
 # pour python 
-__pycache__
-
+__pycache__/
+*/__pycache__/
 # pour jupyter
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # autres 
 automobile-price-prediction-xgboost.ipynb
 eda-for-automobile-dataset.ipynb
+
+# virtual envs
+venv/
+env/
