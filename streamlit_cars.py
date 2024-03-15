@@ -10,9 +10,11 @@ st.markdown("*Cette application se base sur un modèle de machine learning pour 
 # definition d'une fonction d'inférence
 # def inference(symboling, normalized_losses, wheel_base, length, width, height, curb_weight, engine_size, compression_ratio, horse_power, peak_rpm, city_mpg, highway_mpg) :
     
-def inference(symboling, normalized_losses, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, 
-        length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, bore, stroke, compression_ratio, 
-        horsepower, peak_rpm, city_mpg, highway_mpg) : 
+def inference(symboling, normalized_losses, make, fuel_type, aspiration,
+              num_of_doors, body_style, drive_wheels, engine_location, wheel_base,
+              length, width, height, curb_weight, engine_type, num_of_cylinders,
+              engine_size, fuel_system, bore, stroke, compression_ratio,
+              horsepower, peak_rpm, city_mpg, highway_mpg) :
     
     """
     Prends les caracteristiques de la voiture et renvoie le prix selon le modele de ML sauvegardé.
@@ -60,11 +62,13 @@ highway_mpg = st.number_input('highway_mpg', value=30)
 # creation du bouton "predict" qui retourne la prediction
 if st.button("Estimer le prix") :
     prediction = inference(
-        symboling, normalized_losses, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, 
-        length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, bore, stroke, compression_ratio, 
+        symboling, normalized_losses, make, fuel_type, aspiration,
+        num_of_doors, body_style, drive_wheels, engine_location, wheel_base,
+        length, width, height, curb_weight, engine_type, num_of_cylinders,
+        engine_size, fuel_system, bore, stroke, compression_ratio,
         horse_power, peak_rpm, city_mpg, highway_mpg
     )
-    res = "Le prix de cette voiture est : " + round(str(prediction[0]), 4) + " $."
+    res = f"Le prix de cette voiture est : {round(prediction[0], 4)} $."
     st.success(res)
 
 

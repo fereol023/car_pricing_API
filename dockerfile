@@ -7,9 +7,6 @@ RUN pip install -r requirements.txt
 EXPOSE 80
 # Exposer le port pour l'application streamlit
 EXPOSE 81
-# Commande pour démar
-# Vous pouvez utiliser un script shell qui démarre vos applications en arrière-plan
-# al convention linux veut que l'on utilise le répertoire /usr/local/bin/ pour éxécuter des scripts sous unix/linux
 COPY start.sh /usr/local/bin/start.sh
 RUN chmod +x /usr/local/bin/start.sh
 CMD ["/usr/local/bin/start.sh"]
