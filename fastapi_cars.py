@@ -6,6 +6,7 @@ from pydantic import BaseModel
 
 app = FastAPI(debug=True) # initialize
 
+
 class CarData(BaseModel):
     symboling: float
     normalized_losses: float
@@ -32,6 +33,7 @@ class CarData(BaseModel):
     peak_rpm: float
     city_mpg: float
     highway_mpg: float
+
 
 # Routes
 @app.get('/')
